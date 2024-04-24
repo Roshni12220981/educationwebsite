@@ -1,0 +1,50 @@
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is the code for creating the thumbnail</title>
+    <style type="text/css">
+        .imgStyle{
+
+        height : 100px;
+        width: 100px;
+        border : 3px solid grey;
+}
+    </style>
+</head>
+<body>
+    <img id="mainImage" style="border:3px solid grey" src ="img1.jpg" height="500px" width="540px"
+    <br>
+
+    <div id ="divId" onclick="changeImageOnClick()" onmouseover = "f1()" onmouseout = "f2()" >
+        <img id="4" class="imgStyle" src="img4.jpg">
+        <img id="2" class="imgStyle" src="img3.jpg">
+        <img id="3" class="imgStyle" src="img2.jpg">
+
+    </div>
+    <script type="text/javascript">
+
+    function changeImageOnClick()
+    {
+        var x = event.target;
+        if(x.tagName=="IMG")
+        {
+            a=x.getAttribute("src");
+            document.getElementById("mainImage").setAttribute("src",a);
+        }
+    }
+    function f1(){
+        x=event.target;
+        x.style.cursor ='pointer' ;
+        x.style.border = '3px solid red';
+    }
+    function f2(){
+        x=event.target;
+        x.style.cursor ='default' ;
+        x.style.border = '3px solid grey';
+    }
+</script>
+
+    
+</body>
+</html> 

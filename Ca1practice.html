@@ -1,0 +1,261 @@
+<!-- <!DOCTYPE html>
+<head>
+    <title>This is a from</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Registration form</legend>
+        <style>
+            body {
+                background-color: #82eef3;
+            }
+        </style>
+        <table>
+            <tr>
+                <td>Firstname: </td>
+                <td>
+                    <input type="text" placeholder="Name" name="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Middlename:
+                </td>
+                <td>
+                    <input type="text" placeholder="Name" name="middlename">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Course:
+                </td>
+                <td>
+                    <select>
+                        <option value="CSE">CSE</option>
+                        <option value="IT">IT</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EEE">EEE</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                Gender:
+                </td>
+                <td>
+                    <input type="radio" name="gender">male
+                    <input type="radio" name="gender">female
+                    <input type="radio" name="gender">third gender
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Phone:
+                </td>
+                <td>
+                    <input type="text" placeholder="+91XXXXXXXX" name="number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password
+                </td>
+                <td>
+                    <input type="password" placeholder="Password" name="password">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <input type="submit" value="submit">
+                </td>
+            </tr>
+
+
+
+        </table>
+    </fieldset>
+
+</body>
+</html> -->
+
+<!-- QNO IMAGESLIDINGS
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .slider img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="slider">
+    <img src="1.jpg" alt="Image 1">
+    <img src="2.jpg" alt="Image 2">
+    <img src="3.jpg" alt="Image 3">
+  </div>
+</div>
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.slider img');
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.transform = `translateX(-${index * 100}%)`;
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showSlide(currentIndex);
+  }
+
+  // Auto-slide every 3 seconds
+  setInterval(nextSlide, 3000);
+</script>
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Keys Example</title>
+</head>
+<body>
+    <script>
+        // Create person object
+        const person = {
+            name: 'John Doe',
+            age: 30,
+            email: 'john.doe@example.com'
+        };
+
+        // Get keys of the person object
+        const keys = Object.keys(person);
+
+        // Log keys to console (for demonstration purposes)
+        console.log(keys);
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Form</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+margin: 0;
+padding: 0;
+}
+.container {
+max-width: 400px;
+margin: 50px auto;
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h2 {
+text-align: center;
+}
+form {
+margin-top: 20px;
+}
+label {
+display: block;
+margin-bottom: 8px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+width: 100%;
+padding: 8px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+input[type="submit"] {
+background-color: #4caf50;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+input[type="submit"]:hover {
+background-color: #45a049;
+}
+.error
+{
+color: red;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>LPU Student</h2>
+<form novalidate onsubmit=" return formvalidation()">
+<label for="name">Name</label>
+<input type="text" id="n1" name="name" placeholder="Your name..">
+<span id="n2" class="error"></span>
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email" placeholder="Your email.." required>
+
+<label for="message">Message</label>
+<textarea id="message" name="message" placeholder="Write something.." style="height:100px" required></textarea>
+
+<input type="submit" value="Submit">
+<script>
+function formvalidation(){
+let a = document.getElementById("n1").value
+let isvalid= true;
+if(document.getElementById("n1").value==""){
+//alert("name is mandatory");
+
+document.getElementById("n2").innerHTML="name is mandatory";
+isvalid=false;
+
+}
+return isvalid
+}
+</script>
+</form>
+</div>
+
+</body>
+</html>

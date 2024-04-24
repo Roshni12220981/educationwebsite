@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slideshow</title>
+<script>
+var images = ['1.jpg', '2.jpg', '3.jpg'];
+var currentIndex = 0;
+
+function prevImage() {
+    if (currentIndex === 0) {
+        currentIndex = images.length - 1;
+    } else {
+        currentIndex--;
+    }
+    document.getElementById('image').src = images[currentIndex];
+}
+
+function nextImage() {
+    if (currentIndex === images.length - 1) {
+        currentIndex = 0;
+    } else {
+        currentIndex++;
+    }
+    document.getElementById('image').src = images[currentIndex];
+}
+</script>
+</head>
+<body>
+    <button onclick="prevImage()">Previous</button>
+    <img id="image" src="1.jpg" alt="Slideshow Image">
+    <button onclick="nextImage()">Next</button>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>onmouseout Example</title>
+<script>
+function changeColor(element) {
+    element.style.backgroundColor = "red";
+}
+
+function revertColor(element) {
+    element.style.backgroundColor = "transparent";
+}
+</script>
+<style>
+    .highlight {
+        padding: 20px;
+        background-color: transparent;
+        border: 2px solid black;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <h1>onmouseout Example</h1>
+    <p>Move the mouse pointer over the box below to highlight it, and then move it out to revert the color:</p>
+    <div class="highlight" onmouseover="changeColor(this)" onmouseout="revertColor(this)">
+        Hover over me
+    </div>
+</body>
+</html>
+

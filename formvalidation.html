@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Simple Form</h2>
+
+<form id="myForm">
+  <label for="name">Name:</label><br>
+  <input type="text" id="n1" name="name"><br>
+  
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email"><br>
+  
+  <input type="submit"  value="Submit" onclick="validation()">
+</form>
+    <script>
+        function validation()
+        {
+            if(document.getElementById("n1").value=="")
+            
+            alert("name is mandatory");
+        }
+    </script>
+    
+</body>
+</html>
+
+<!-- Write a javascript function to validate a form with the following requirements:
+The name field must not be empty.
+The email field must conatin a valid email address format.
+The message field must not be empty.
+The password must be at least 8 characters long. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+<script>
+function validateForm() {
+    var name = document.forms["myForm"]["name"].value;
+    var email = document.forms["myForm"]["email"].value;
+    var message = document.forms["myForm"]["message"].value;
+    var password = document.forms["myForm"]["password"].value;
+
+    if (name === "") {
+        alert("Name must not be empty");
+        return false;
+    }
+
+    if (!validateEmail(email)) {
+        alert("Invalid email format");
+        return false;
+    }
+
+    if (message === "") {
+        alert("Message must not be empty");
+        return false;
+    }
+
+    if (password.length < 8) {
+        alert("Password must be at least 8 characters long");
+        return false;
+    }
+
+    return true;
+}
+
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+</script>
+</head>
+<body>
+
+<h2>Form Validation</h2>
+<form name="myForm" onsubmit="return validateForm()" method="post">
+    Name: <input type="text" name="name"><br>
+    Email: <input type="email" name="email"><br>
+    Message: <textarea name="message"></textarea><br>
+    Password: <input type="password" name="password"><br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
+

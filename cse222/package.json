@@ -1,0 +1,16 @@
+{
+  "name": "ramkipyari",
+  "version": "1.0.0",
+  "description": "this is my first package lets see what I can do",
+  "main": "add.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nice",
+    "sunny",
+    "day"
+  ],
+  "author": "Roshni",
+  "license": "ISC"
+}

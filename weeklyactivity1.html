@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" ="key()">
+    
+    <script>
+        function changeColourOnMouseOver()
+        {
+            document.getElementById("btn").style.background="red";
+            document.getElementById("btn").style.color="yellow";
+            document.getElementById("btn").style.transform="rotate(360deg) scale(1.5)";
+            document.getElementById("btn").style.transition="2s";
+        }
+        function changeColourOnMouseOut()
+        {
+            document.getElementById("btn").style.background="cadetblue";
+            document.getElementById("btn").style.color="green";
+            document.getElementById("btn").style.transform="rotate(360deg) scale(1.5)";
+            document.getElementById("btn").style.transition="1s";
+        }
+        function key()
+        {
+            alert("a key has been pressed");
+
+        }
+    </script>
+</body>
+</html>

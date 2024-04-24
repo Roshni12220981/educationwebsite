@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let marks = prompt("Enter your marks");
+        marks = parseFloat(marks);
+        
+        if (isNaN(marks)) {
+            console.log("Invalid input. Please enter a valid number.");
+        } else {
+            if (marks >= 90) {
+                console.log("A");
+            } else if (marks >= 80 && marks < 90) {
+                console.log("B");
+            } else if (marks >= 70 && marks < 80) {
+                console.log("C");
+            } else if (marks >= 60 && marks < 70) {
+                console.log("D");
+            } else {
+                console.log("F");
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- Write a javascipt conditional statement to find the sign of the product of three numbers.Display an alert box with the specified sign. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = prompt("Enter the first number");
+        let num2 = prompt("Enter the second number");
+        let num3 = prompt("Enter the third number");
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        num3 = parseFloat(num3);
+        
+        if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+            console.log("Invalid input. Please enter a valid number.");
+        } else {
+            if (num1 * num2 * num3 > 0) {
+                console.log("Positive");
+            } else if (num1 * num2 * num3 < 0) {
+                console.log("Negative");
+            } else {
+                console.log("Zero");
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
+<!-- Write a javascript for loop that prints the square of numners from 1 to 5.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        let a = prompt("Enter the number:");
+        a = parseFloat(a);
+        for(int i=0;i<n;i++){
+
+        }
+    </script>
+    
+ </body>
+ </html>
+
+ Write a javaScript loop that iterates over an array of fruits and logs each fruit to the console.
+ 

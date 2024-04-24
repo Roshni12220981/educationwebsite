@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reverse String</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        font-display: inline-block;
+        text-align: center;
+        background-color: beige;
+    }
+</style>
+</head>
+<body>
+    <h2>Reverse a String</h2>
+    <input type="text" id="inputString" placeholder="Enter a string">
+    <button onclick="reverseString()" style="color: black "background-color: green;">Reverse</button>
+    <p id="output"></p>
+
+    <script>
+        function reverseStringRecursive(str) {
+            if (str === "") {
+                return "";
+            } else {
+                return reverseStringRecursive(str.substr(1)) + str.charAt(0);
+            }
+        }
+
+        function reverseString() {
+            var input = document.getElementById("inputString").value;
+            var output = document.getElementById("output");
+            
+            if (input === "") {
+                output.textContent = "Please enter a string.";
+            } else {
+                output.textContent = "Reversed string: " + reverseStringRecursive(input);
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reverse String</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: beige;
+    }
+</style>
+</head>
+<body>
+    <h2>Reverse a String</h2>
+    <input type="text" id="inputString" placeholder="Enter a string">
+    <button onclick="reverseString()" style="color: black; background-color: green;">Reverse</button>
+    <p id="output"></p>
+
+    <script>
+        function reverseString() {
+            var input = document.getElementById("inputString").value;
+            var output = document.getElementById("output");
+            
+            output.textContent = input.split('').reverse().join('');
+        }
+    </script>
+</body>
+</html>
